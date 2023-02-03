@@ -52,7 +52,7 @@ class Rectangle:
         return 2 * (self.height + self.width)
 
     print_symbol = "#"
- 
+
     def __str__(self):
         """Return a string representation of the Square."""
         if self.__width == 0 or self.__height == 0:
