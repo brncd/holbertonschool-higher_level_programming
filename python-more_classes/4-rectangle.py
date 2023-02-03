@@ -52,12 +52,12 @@ class Rectangle:
         """Return string representation of rectangle."""
         if self.width == 0 or self.height == 0:
             return ""
-        else :
+        else:
             for i in range(self.height):
                 for j in range(self.width):
                     print("#", end="")
                 if i != self.height - 1:
-                    print()            
+                    print()
         return ""
 
     def __repr__(self):
