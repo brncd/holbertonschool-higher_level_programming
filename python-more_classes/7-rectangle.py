@@ -52,14 +52,17 @@ class Rectangle:
         return 2 * (self.height + self.width)
 
     print_symbol = "#"
-
+ 
     def __str__(self):
         """Return a string representation of the Square."""
         if self.__width == 0 or self.__height == 0:
             return ""
-        for i in range(self.__height - 1):
-            print(self.print_symbol * self.__width)
-        return str((self.print_symbol * self.__width))
+        a = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                a += str(self.print_symbol)
+            a += "\n"
+        return a[:-1]
 
     def __repr__(self):
         """Return string representation of rectangle."""
