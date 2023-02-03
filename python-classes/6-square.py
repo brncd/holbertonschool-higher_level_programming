@@ -10,6 +10,8 @@ class Square:
             """Initialize square."""
             self.__size = size
             self.__position = position
+            if type(position) is not tuple or len(position) != 2:
+                raise TypeError("position must be a tuple of 2 positive integers")
     
         @property
         def size(self):
