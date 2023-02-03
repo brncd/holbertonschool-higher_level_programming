@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 """Holberton School."""
 
 
@@ -52,5 +52,4 @@ class Rectangle:
         """Return string representation of rectangle."""
         if self.width == 0 or self.height == 0:
             return ""
-
         return ""
