@@ -70,7 +70,7 @@ class Rectangle:
 
     def __del__(self):
         """Delete rectangle."""
-        print("Bye rectangle...")
+        print("Bye rectangle...", end="")
         del self
         Rectangle.number_of_instances -= 1
 
