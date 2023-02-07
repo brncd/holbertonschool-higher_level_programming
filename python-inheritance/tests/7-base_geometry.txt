@@ -5,11 +5,12 @@
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
 >>> bg.integer_validator("width", 89)
->>> 
->>> area()
+>>> bg.area()
 Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
-NameError: name 'area' is not defined
+  File "/root/holbertonschool-higher_level_programming/python-inheritance/7-base_geometry.py", line 9, in area
+    raise Exception("area() is not implemented")
+Exception: area() is not implemented
 >>> 
 >>> try:
 ...     bg.integer_validator()
@@ -65,3 +66,8 @@ NameError: name 'area' is not defined
 ...     print("[{}] {}".format(e.__class__.__name__, e))
 ... 
 [ValueError] distance must be greater than 0
+>>> try:
+...     bg.integer_validator("distance", [3])
+... except Exception as e:
+...     print("[{}] {}".format(e.__class__.__name__, e))
+... 
