@@ -31,5 +31,5 @@ class Base:
             if list_objs is None:
                 f.write("[]")
             else:
-                f.write(Base.to_json_string(
+                f.write(filename.to_json_string(
                     [obj.to_dictionary() for obj in list_objs]))
