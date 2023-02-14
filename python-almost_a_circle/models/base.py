@@ -29,7 +29,7 @@ class Base:
         filename = "{}.json".format(list_objs[0].__class__.__name__)
         arg = [obj.to_dictionary() for obj in list_objs]
         with open(filename, "w") as f:
-            if arg is None or arg == []:
+            if arg is None or arg == [] or len(arg) == 0:
                 f.write("[]")
             else:
                 f.write(Base.to_json_string(arg))
