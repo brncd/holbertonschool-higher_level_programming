@@ -28,7 +28,7 @@ class Base:
         import json
         filename = "{}.json".format(list_objs[0].__class__.__name__)
         with open(filename, "w") as f:
-            if list_objs is None:
+            if list_objs is None or list_objs == []:
                 f.write("[]")
             else:
                 f.write(Base.to_json_string(
