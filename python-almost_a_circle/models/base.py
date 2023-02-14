@@ -26,7 +26,7 @@ class Base:
     def save_to_file(list_objs):
         """Writes the JSON string representation of list_objs to a file"""
         import json
-        filename = Base.__name__ + ".json
+        filename = Base.__name__ + ".json"
         with open(filename, "w") as f:
             if list_objs is None:
                 f.write("[]")
