@@ -23,13 +23,10 @@ class Base:
         return json.dumps(list_dictionaries)
 
     @staticmethod
-    def save_to_file(cls, list_objs):
-        """writes the JSON string representation of list_objs to a file."""
+    def save_to_file(list_objs):
+        """Writes the JSON string representation of list_objs to a file"""
         import json
-        filename = cls.__name__ + ".json"
-        with open(filename, "w") as f:
-            if list_objs is None:
-                f.write("[]")
-            else:
-                list_objs = [obj.to_dictionary() for obj in list_objs]
-                f.write(cls.to_json_string(list_objs))
+        if list_objs is None:
+            list_objs = []
+        with open("Rectangle.json", "w") as f:
+            f.write(Base.to_json_string([x.to_dictionary() for x in list_objs]))
